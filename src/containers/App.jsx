@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import ClearButton from "../components/ClearButton";
+import * as math from "mathjs";
 import "./App.css";
 
 class App extends Component {
@@ -14,6 +15,10 @@ class App extends Component {
 
   handleInput = value => {
     this.setState({input: this.state.input + value});
+  }
+
+  handleEqual = () => {
+    this.setState({input: math.eval(this.state.input)});
   }
 
   handleClear = () => {
@@ -46,7 +51,7 @@ class App extends Component {
           <div className="row">
             <Button onInput={this.handleInput}>.</Button>
             <Button onInput={this.handleInput}>0</Button>
-            <Button onInput={this.handleInput}>=</Button>
+            <Button onInput={this.handleEqual}>=</Button>
             <Button onInput={this.handleInput}>-</Button>
           </div>
           <div className="row">
