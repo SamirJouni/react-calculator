@@ -13,7 +13,7 @@ const Button = props => {
 	}
 
 	return (
-		<div className={isOperator(props.children)}>
+		<div className={isOperator(props.children)} onClick={ () => props.onInput(props.children)}>
 			{props.children}
 		</div>
 	 );
