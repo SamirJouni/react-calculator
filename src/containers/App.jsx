@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "../components/Button";
 import Input from "../components/Input";
+import ClearButton from "../components/ClearButton";
 import "./App.css";
 
 class App extends Component {
@@ -9,6 +10,10 @@ class App extends Component {
     this.state = {
       input: ''
     }
+  }
+
+  handleClear = () => {
+    this.setState({input: ''});
   }
 
 	render() {
@@ -39,6 +44,9 @@ class App extends Component {
             <Button>0</Button>
             <Button>=</Button>
             <Button>-</Button>
+          </div>
+          <div className="row">
+          <ClearButton onClear={this.handleClear}>Clear</ClearButton>
           </div>
         </div>
 			</div>
