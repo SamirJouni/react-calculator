@@ -12,6 +12,11 @@ class App extends Component {
     }
   }
 
+
+  appendToInput = value => {
+    this.setState({input: this.state.input + value});
+  }
+
   handleClear = () => {
     this.setState({input: ''});
   }
