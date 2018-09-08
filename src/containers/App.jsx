@@ -40,7 +40,7 @@ class App extends Component {
             <Button onInput={this.handleInput}>4</Button>
             <Button onInput={this.handleInput}>5</Button>
             <Button onInput={this.handleInput}>6</Button>
-            <Button onInput={this.handleInput}>X</Button>
+            <Button onInput={this.handleInput}>*</Button>
           </div>
           <div className="row">
             <Button onInput={this.handleInput}>1</Button>
