@@ -5,7 +5,7 @@
   "homepage": "./",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "mathjs": "^5.6.0",
+    "mathjs": "^5.7.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
