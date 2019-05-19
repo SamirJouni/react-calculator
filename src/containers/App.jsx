@@ -15,6 +15,7 @@ class App extends Component {
 
 	handleInput = (value, keyboard = false) => {
 		if (keyboard) {
+      value = value.replace(/([a-zA-Z!$&()_|~`{}\[\]:";'<>?,])\w+/g, '');
 			this.setState({ input: value });
 		} else {
 			this.setState({ input: this.state.input + value });
